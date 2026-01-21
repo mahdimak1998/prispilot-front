@@ -1,0 +1,13 @@
+-- Create RPC function to get unique municipalities
+CREATE OR REPLACE FUNCTION get_unique_municipalities()
+RETURNS TABLE(municipality_name text) AS $$
+BEGIN
+  RETURN QUERY
+  SELECT DISTINCT pd.municipality_name::text
+  FROM power_deals pd
+  WHERE pd.municipality_name IS NOT NULL 
+    AND pd.municipality_name != ''
+    AND length(trim(pd.municipality_name)) > 0
+  ORDER BY pd.municipality_name;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;

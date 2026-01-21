@@ -1,0 +1,173 @@
+/* Dark mode support */
+.dark .universal-card {
+  background: #23232b;
+  border-color: #27272a;
+}
+.dark .card-logo-container {
+  background: #fff !important;
+  border-color: #27272a;
+}
+.dark .card-provider-name {
+  color: #fff;
+}
+.dark .card-product-name {
+  color: #cbd5e1;
+}
+.dark .card-product-subtitle {
+  color: #a1a1aa;
+}
+.dark .card-main-price {
+  color: #60a5fa;
+}
+.dark .card-effective-rate {
+  color: #a1a1aa;
+}
+.dark .card-spec-item {
+  background: #23232b;
+  color: #e5e7eb;
+}
+.dark .card-spec-label {
+  color: #a1a1aa;
+}
+.dark .card-spec-value {
+  color: #fff;
+}
+/* UniversalCard: Modern, responsive, and detail-friendly design */
+ .universal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: var(--card-bg, #fff);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07), 0 1.5px 6px 0 rgba(0,0,0,0.03);
+  border: 1px solid var(--border, #e5e7eb);
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  min-width: 240px;
+  max-width: 100%;
+  position: relative;
+  transition: box-shadow 0.2s;
+  overflow: visible;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.universal-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.12), 0 2px 8px 0 rgba(0,0,0,0.05);
+}
+.card-logo-container {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+  border: 1px solid var(--border, #e5e7eb);
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -48px auto 0 auto;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.card-logo-container img {
+  max-width: 70px;
+  max-height: 70px;
+  object-fit: contain;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  gap: 0.25rem;
+}
+.card-provider-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--foreground, #222);
+  text-align: center;
+  margin-bottom: 0.1rem;
+  word-break: break-word;
+}
+.card-product-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted-foreground, #666);
+  text-align: center;
+  margin-bottom: 0.1rem;
+  word-break: break-word;
+}
+.card-product-subtitle {
+  font-size: 0.92rem;
+  color: var(--muted-foreground, #888);
+  text-align: center;
+  margin-bottom: 0.2rem;
+  word-break: break-word;
+}
+.card-price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+.card-main-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary, #2563eb);
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.card-effective-rate {
+  font-size: 0.85rem;
+  color: var(--muted-foreground, #888);
+  text-align: center;
+}
+.card-specifications {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.2rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+.card-spec-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.97rem;
+  color: var(--foreground, #222);
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 0.18rem 0.7rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.03);
+  white-space: nowrap;
+}
+.card-spec-label {
+  font-weight: 500;
+  color: var(--muted-foreground, #666);
+}
+.card-spec-value {
+  font-weight: 600;
+  color: var(--foreground, #222);
+}
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 600px) {
+  .universal-card {
+    padding: 1.1rem 0.5rem 1rem 0.5rem;
+    min-width: 0;
+  }
+  .card-logo-container {
+    width: 64px;
+    height: 64px;
+    margin-top: -36px;
+  }
+  .card-logo-container img {
+    max-width: 54px;
+    max-height: 54px;
+  }
+}

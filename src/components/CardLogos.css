@@ -1,0 +1,22 @@
+/* Card logo containers: no reserved space if image/fallback missing */
+.logo-container, .card-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  background: none;
+}
+.logo-container img, .card-logo-container img {
+  max-height: 48px;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+.logo-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
