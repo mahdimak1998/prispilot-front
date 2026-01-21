@@ -36,7 +36,7 @@ const ScrollToTop = () => {
 
 import React from "react";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: (
@@ -119,6 +119,10 @@ const router = createBrowserRouter([
     ),
   },
 ]);
+
+const router = createBrowserRouter(routes, {
+  basename: "/prispilot-front",
+});
 
 const App = () => {
   return (
